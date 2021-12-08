@@ -9,7 +9,7 @@ export const Home = () => {
 
   useEffect(() => {
     authContext.loadUser();
-  }, [authContext]);
+  }, []);
   return (
     <div className='grid-2'>
       <div>
