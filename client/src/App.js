@@ -1,4 +1,6 @@
+import React from 'react';
 import './App.css';
+
 import { Navbar } from './layouts/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
@@ -15,7 +17,7 @@ import PrivateRoute from './components/routing/PrivateRoute';
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
-function App() {
+const App = () => {
   return (
     <AuthState>
       <ContactState>
@@ -42,6 +44,6 @@ function App() {
       </ContactState>
     </AuthState>
   );
-}
+};
 
 export default App;
